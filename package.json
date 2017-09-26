@@ -2,23 +2,48 @@
     "name": "zarm-vue-vscode-helper",
     "displayName": "zarm-vue-vscode-helper",
     "description": "a vscode helper for zarm-vue",
-    "version": "0.0.1",
+    "version": "0.1.2",
     "publisher": "zarm-vue-vscode-helper",
     "engines": {
         "vscode": "^1.16.0"
     },
     "categories": [
-        "Other"
+        "Snippets"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onLanguage:html",
+        "onLanguage:vue"
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [
+        "languages": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "id": "vue",
+                "aliases": [
+                    "Vue",
+                    "vue"
+                ],
+                "extensions": [
+                    ".vue"
+                ],
+                "configuration": "./syntaxes/vue.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "vue",
+                "scopeName": "text.html.vue",
+                "path": "./syntaxes/vue.tmLanguage"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/zarm.json"
+            },
+            {
+                "language": "vue",
+                "path": "./snippets/zarm.json"
             }
         ]
     },

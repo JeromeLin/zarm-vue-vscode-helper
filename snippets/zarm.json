@@ -13,6 +13,13 @@
         ],
         "description": "zaToast"
     },
+    "newZaToast": {
+        "prefix": "this.$zaToast",
+        "body": [
+            "this.$zaToast('${1:text}',{duration: '${2:duration}'});"
+        ],
+        "description": "new one zaToast instance"
+    },
     "za-swipe-action": {
         "prefix": "zaSwipeAction",
         "body": [
