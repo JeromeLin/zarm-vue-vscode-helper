@@ -13,13 +13,6 @@
         ],
         "description": "zaToast"
     },
-    "newZaToast": {
-        "prefix": "this.$zaToast",
-        "body": [
-            "this.$zaToast('${1:text}',{duration: '${2:duration}'});"
-        ],
-        "description": "new one zaToast instance"
-    },
     "za-swipe-action": {
         "prefix": "zaSwipeAction",
         "body": [
@@ -33,7 +26,7 @@
         "prefix": "zaPull",
         "body": [
             "<za-pull :on-refresh='' :refreshing=''>",
-            "    <za-cell v-for='i in myData':key='i'>${3:content}</za-cell>",
+            "    <za-cell v-for='i in myData':key='i'>${1:content}</za-cell>",
             "</za-pull>"
         ],
         "description": "zaPull"
@@ -46,5 +39,181 @@
             "</za-popup>"
         ],
         "description": "zaPopup"
+    },
+    "za-modal": {
+        "prefix": "zaModal",
+        "body": [
+          "<za-modal :visible.sync='' @close='' title='' :showClose=''>",
+          "   <div>${1:content}</div>",
+          "</za-modal>"
+        ],
+        "description": "zaModal"
+    },
+    "za-button": {
+        "prefix": "zaButton",
+        "body": [
+            "<za-button theme='${1:primary}' size='' shape=''>${2:content}</za-button>"
+        ],
+        "description": "zaButton"
+    },
+    "za-actionsheet": {
+        "prefix": "zaActionSheet",
+        "body": [
+          "<za-actionsheet :visible.sync='' :actions='' :showCancel='' @cancel=''></za-actionsheet>"
+        ],
+        "description": "zaActionSheet"
+    },
+    "za-checkbox": {
+        "prefix": "zaCheckBox",
+        "body": [
+            " <za-checkbox v-model='' @change=''>${1:content}</za-checkbox>"
+        ],
+        "description": "zaCheckBox"
+    },
+    "za-checkbox-group": {
+        "prefix": "zaCheckBoxGroup",
+        "body": [
+            "<za-checkbox-group v-model='' @change=''>",
+            "   <za-checkbox label=''>${1:content}</za-checkbox>",
+            "</za-checkbox-group>"
+        ],
+        "description": "zaCheckBoxGroup"
+    },
+    "za-input": {
+        "prefix": "zaInput",
+        "body": [
+            "<za-input v-model='' type='text' placeholder='' ></za-input>"
+        ],
+        "description": "zaInput"
+    },
+    "za-picker": {
+        "prefix": "zaPicker",
+        "body": [
+            "<za-picker :visible.sync='' v-model='' :dataSource='' @ok=''@cancel=''></za-picker>"
+        ],
+        "description": "zaPicker"
+    },
+    "za-radio-group": {
+        "prefix": "zaRadioGroup",
+        "body": [
+            "<za-radio-group v-model=''>",
+            "   <za-radio v-for='i in items' :label='' :key=''>${1:item}</za-radio>",
+            "</za-radio-group>"
+        ],
+        "description": "zaRadioGroup"
+    },
+    "za-stepper": {
+        "prefix": "zaStepper",
+        "body": [
+            "<za-stepper v-model='' :min='' :max='' :step='' ></za-stepper>"
+        ],
+        "description": "zaStepper"
+    },
+    "za-switch": {
+        "prefix": "zaSwitch",
+        "body": [
+            "<za-switch v-model='' @change='' ></za-switch>"
+        ],
+        "description": "zaSwitch"
+    },
+    "za-uploader": {
+        "prefix": "zaUploader",
+        "body": [
+            "<za-uploader @change='' :before-change='' accept=''>${1:content}</za-uploader>"
+        ],
+        "description": "zaUploader"
+    },
+    "za-badge": {
+        "prefix": "zaBadge",
+        "body": [
+            "<za-badge text='' shape=''></za-badge>"
+        ],
+        "description": "zaBadge"
+    },
+    "za-cell": {
+        "prefix": "zaCell",
+        "body": [
+            "<za-cell title='' description=''></za-cell>"
+        ],
+        "description": "zaCell"
+    },
+    "za-icon": {
+        "prefix": "zaIcon",
+        "body": [
+            "<za-icon type='' theme=''></za-icon>"
+        ],
+        "description": "zaIcon"
+    },
+    "za-message": {
+        "prefix": "zaMessage",
+        "body": [
+            "<za-message :visible.sync='' icon='' theme=''></za-message>"
+        ],
+        "description": "zaMessage"
+    },
+    "za-panel": {
+        "prefix": "zaPanel",
+        "body": [
+            "<za-panel>",
+            "   <za-panel-header title='' ></za-panel-header>",
+            "   <za-panel-body>",
+            "     <div>${1:content}</div>",
+            "   </za-panel-body>",
+            "</za-panel>"
+        ],
+        "description": "zaPanel"
+    },
+    "za-notice-bar": {
+        "prefix": "zaNoticeBar",
+        "body": [
+            "<za-notice-bar :visible.sync='' theme=''></za-notice-bar>"
+        ],
+        "description": "zaNoticeBar"
+    },
+    "za-progress": {
+        "prefix": "zaProgess",
+        "body": [
+            "<za-progress :percent='' theme=''></za-progress>"
+        ],
+        "description": "zaProgess"
+    },
+    "za-spinner": {
+        "prefix": "zaSpinner",
+        "body": [
+            "<za-spinner size='' theme=''></za-spinner>"
+        ],
+        "description": "zaSpinner"
+    },
+    "za-swipe": {
+        "prefix": "zaSwipe",
+        "body": [
+            "<za-swipe :height='' direction=''>",
+            "   <za-swipe-item>",
+            "   <div>${1:content}</div>",
+            "   </za-swipe-item>",
+            "</za-swipe>"
+        ],
+        "description": "zaSwipe"
+    },
+    "za-tabs": {
+        "prefix": "zaTabs",
+        "body": [
+            "<za-tabs v-model='' @change=''>",
+            "   <za-tab-pane label='' name=''>",
+            "     <div>${1:content}</div>",
+            "   </za-tab-pane>",
+            "   <za-tab-pane label='' name=''>",
+            "     <div>${2:content}</div>",
+            "   </za-tab-pane>",
+            "</za-tabs>"
+        ],
+        "description": "zaTabs"
+    },
+    "newZaToast": {
+        "prefix": "this.$zaToast",
+        "body": [
+            "this.$zaToast('${1:text}',{duration: '${2:duration}'});"
+        ],
+        "description": "this.$zaToast"
     }
 }
