@@ -1,16 +1,9 @@
-# zarm-vue-vscode-helper README
+# zarm-vue-vscode-helper
 
 ## Feature
 
-* Document
+* ``download`` zarm-vue-vscode-helper-@latest-version.vsix
 
-* Autocomplete
+* 扩展--从VISX安装
 
-* Snippets
-
-
-## Document
-
-![example](/resources/WechatIMG2956.jpeg)
-
-![example](/resources/WechatIMG2954.jpeg)
+* 重启vscode

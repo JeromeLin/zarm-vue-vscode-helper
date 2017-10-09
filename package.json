@@ -2,7 +2,7 @@
     "name": "zarm-vue-vscode-helper",
     "displayName": "zarm-vue-vscode-helper",
     "description": "a vscode helper for zarm-vue",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "publisher": "zarm-vue-vscode-helper",
     "engines": {
         "vscode": "^1.16.0"
